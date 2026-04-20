@@ -12,6 +12,7 @@ class AdaptiveLayout extends StatefulWidget {
 
 class _AdaptiveLayoutState extends State<AdaptiveLayout> {
   int selectedListId = 0;
+
   void _onContactListSelected(int listId) {
     setState(() {
       selectedListId = listId;
@@ -27,7 +28,7 @@ class _AdaptiveLayoutState extends State<AdaptiveLayout> {
         if (isLargeScreen) {
           return _buildLargeScreenLayout();
         } else {
-          return const ContactGroupsPage();
+          return const ContactGroupsPage(listId: 0);
         }
       },
     );
